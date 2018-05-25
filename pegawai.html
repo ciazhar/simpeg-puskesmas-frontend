@@ -1,0 +1,75 @@
+<html>
+    <head>
+         <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body ng-app="pegawaiApp">
+
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><i class="material-icons">healing</i>Simpeg Puskesmas</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="">Pegawai</a></li>
+                <li><a href="">Absen</a></li>
+                <li><a href="">Mutasi</a></li>
+                <li><a href="">Surat Tugas</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div ng-controller="pegawaiController" class="container">
+            <h1>Daftar Pegawai</h1>
+            <table class="striped highlight centered card" border="1">
+                <thead>
+                    <tr>
+                        <th>No Ktp</th>
+                        <th>Gaji</th>
+                        <th>Status Kepegawaian</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat= "pegawai in daftarPegawai.content">
+                        <td>{{pegawai.noKtp}}</td>
+                        <td>{{pegawai.gaji}}</td>
+                        <td>{{pegawai.statusKepegawaian}}</td>
+                        <td>
+                            <button class="btn waves-effect waves-light red" name="action">
+                                <i class="material-icons">edit</i>
+                            </button>
+                            <button class="btn waves-effect waves-light red" name="action">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>   
+            
+            
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large red">
+                    <i class="large material-icons">add</i>
+                </a>
+            </div>
+        </div>
+        
+        <script src="js/angular.min.js"></script>
+        <script src="js/pegawai.js"></script>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, options);
+            });
+                    
+        </script>
+    
+    </body>
+</html>
