@@ -1,12 +1,7 @@
 <html>
     <head>
-         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body ng-app="pegawaiApp">
 
@@ -23,6 +18,7 @@
             </div>
         </nav>
         
+        <!-- Container -->
         <div ng-controller="pegawaiController" class="container">
             <h1>Daftar Pegawai</h1>
             <table class="striped highlight centered card" border="1">
@@ -51,7 +47,7 @@
                 </tbody>
             </table>   
             
-            
+            <!-- Button Add -->
             <div class="fixed-action-btn">
                 <a class="btn-floating btn-large red">
                     <i class="large material-icons">add</i>
@@ -59,17 +55,8 @@
             </div>
         </div>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script src="js/angular.min.js"></script>
         <script src="js/pegawai.js"></script>
-
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.sidenav');
-                var instances = M.Sidenav.init(elems, options);
-            });
-                    
-        </script>
-    
     </body>
 </html>
