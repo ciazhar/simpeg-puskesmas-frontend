@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body ng-app="mutasiApp">
+
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><i class="material-icons">healing</i>Simpeg Puskesmas</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="pegawai.html">Pegawai</a></li>
+                <li><a href="absen.html">Absen</a></li>
+                <li><a href="mutasi.html">Mutasi</a></li>
+                <li class="active"><a href="surat.html">Surat Tugas</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Container -->
+        <div class="container" ng-controller="mutasiController">
+            <h1>Form Cuti Pegawai</h1>
+            <div class="row card">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input id="id_pegawai" type="text" class="validate" ng-model="mutasi.id">
+                        <label for="id_pegawai">ID Pegawai</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input id="tanggal_mulai" type="text" class="validate">
+                        <label for="tanggal_mulai">Tanggal Mulai</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <input id="tanggal_selesai" type="text" class="validate">
+                        <label for="tanggal_selesai">Tanggal Selesai</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="js/angular.min.js"></script>
+    </body>
+</html>
