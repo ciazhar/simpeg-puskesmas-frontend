@@ -7,7 +7,7 @@ app.controller('mutasiController',function ($scope, $http, $window) {
     $scope.simpanMutasi = function () {
         $http.post(BASE_URL+'/mutasi', $scope.mutasi).then(sukses,gagal);
         function sukses(response) {
-            $window.location.href = urlListMutasi;
+            console.log('Response : '+response.data.message);
         };
         function gagal(response) {
             console.log('Error'+response);
