@@ -1,7 +1,7 @@
 var app = angular.module('mainModule', []);
 var API_LOGIN_URL = 'http://dinkes.batangkab.go.id:8080/login'
 var API_REGISTER_URL = 'http://dinkes.batangkab.go.id:8080/account/users/submit'
-var HOME_URL = 'home.html'
+var HOME_URL = 'index.html'
 var LOGIN_URL = 'login.html'
 
 app.controller('userController', function($scope, $http, $window){
