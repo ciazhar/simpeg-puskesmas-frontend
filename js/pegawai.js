@@ -15,4 +15,16 @@ app.controller('pegawaiController',function ($scope, $http, $window) {
         }
     };
     $scope.listPegawai();
+    
+    $scope.hapusPegawai = function(pegawai){
+        $http.post(BASE_URL+'/pegawai/'+pegawai.id).then(sukses,gagal);
+        function sukses(response) {
+            console.log(response.data.data)
+        }
+        function gagal(response) {
+            console.log(response);
+        }
+        $window.location.reload();
+    };
+
 })
