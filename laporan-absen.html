@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
-    <body ng-app="">
+    <body ng-app="absenApp">
 
         <!-- Navbar -->
         <nav>
@@ -19,7 +19,7 @@
         </nav>
         
         <!-- Container -->
-        <div ng-controller="pegawaiController" class="container">
+        <div ng-controller="absenController" class="container">
             <h1>Laporan Absen Pegawai</h1>
             <table class="striped highlight centered card" border="1">
                 <thead>
@@ -48,5 +48,6 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         <script src="js/angular.min.js"></script>
+        <script src="js/absen.js"></script>
     </body>
 </html>
