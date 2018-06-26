@@ -36,7 +36,7 @@
                         <td>{{pegawai.gaji}}</td>
                         <td>{{pegawai.statusKepegawaian}}</td>
                         <td>
-                            <button class="btn waves-effect waves-light red" name="action">
+                            <button class="btn waves-effect waves-light red" name="action" ng-click="editPegawai(pegawai)">
                                 <i class="material-icons">edit</i>
                             </button>
                             <button class="btn waves-effect waves-light red" name="action"  ng-click="hapusPegawai(pegawai)">
@@ -49,7 +49,7 @@
             
             <!-- Button Add -->
             <div class="fixed-action-btn">
-                <a class="btn-floating btn-large red">
+                <a class="btn-floating btn-large red" href="form-pegawai.html">
                     <i class="large material-icons">add</i>
                 </a>
             </div>

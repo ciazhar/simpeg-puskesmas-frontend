@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body ng-app="pegawaiApp">
+
+        <!-- Navbar -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><i class="material-icons">healing</i>Simpeg Puskesmas</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="pegawai.html">Pegawai</a></li>
+                <li><a href="absen.html">Absen</a></li>
+                <li><a href="mutasi.html">Mutasi</a></li>
+                <li><a href="surat.html">Surat Tugas</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Container -->
+        <div ng-controller="formController" class="container">
+            <h1>Form Pegawai</h1>
+            <form name="pegawaiForm" class="form-horizontal">
+                    <input type="hidden" ng-model="pegawai.id" ng-value="findedPegawai.id"/>
+                    
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input id="noKtp" type="text" class="validate" ng-model="pegawai.noKtp" ng-value="findedPegawai.noKtp">
+                        <label for="noKtp">No KTP</label>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input id="gaji" type="text" class="validate" ng-model="pegawai.gaji" ng-value="findedPegawai.gaji">
+                        <label for="gaji">Gaji</label>
+                    </div>
+                    </div>
+
+                    <div>
+                            <button ng-disabled="!pegawaiForm.$valid" class="btn btn-deffault" type="submit" ng-click="simpanPegawai()">Simpan</button>
+                    </div>
+            </form>
+            <!-- Button Add -->
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large red">
+                    <i class="large material-icons">add</i>
+                </a>
+            </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/pegawai.js"></script>
+    </body>
+</html>
